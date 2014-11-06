@@ -1,0 +1,32 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title eTOC Generator: Top and bottom matter
+  meta(name="viewport" content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='css/style.css')
+body
+  div.wrapper
+    form(action='matter-process.php' method='post')
+      fieldset
+        legend Fill in the particulars
+        label(for='etoc_date') eTOC date
+        input(type='text' name='etoc_date')#etoc_date
+        br
+        label(for='ad_loc') Leaderboard ad image location
+        input(type='text' name='ad_loc')#ad_loc
+        br
+        label(for='ad_link') Leaderboard ad image link
+        input(type="text" name="ad_link")#ad_link
+        br
+        label(for='ad_title') Leaderboard ad title
+        input(type="text" name="ad_title")#ad_title
+        br
+        label(for='jobs_month') Jobs month
+        input(type="text" name="jobs_month")#jobs_month
+        br
+        label(for='jobs_link') Jobs link
+        input(type="text" name="jobs_link")#jobs_link
+        br
+        input(type="submit" value="Go")
+
+  script(src='http://localhost:35729/livereload.js')

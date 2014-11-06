@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>eTOC Generator: Top and bottom matter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <form action="matter-process.php" method="post">
+      <fieldset>
+        <legend>Fill in the particulars</legend>
+        <label for="etoc_date">eTOC date</label>
+        <input type="text" name="etoc_date" id="etoc_date"><br>
+        <label for="ad_loc">Leaderboard ad image location</label>
+        <input type="text" name="ad_loc" id="ad_loc"><br>
+        <label for="ad_link">Leaderboard ad image link</label>
+        <input type="text" name="ad_link" id="ad_link"><br>
+        <label for="ad_title">Leaderboard ad title</label>
+        <input type="text" name="ad_title" id="ad_title"><br>
+        <label for="jobs_month">Jobs month</label>
+        <input type="text" name="jobs_month" id="jobs_month"><br>
+        <label for="jobs_link">Jobs link</label>
+        <input type="text" name="jobs_link" id="jobs_link"><br>
+        <input type="submit" value="Go">
+      </fieldset>
+    </form>
+  </div>
+  <script src="http://localhost:35729/livereload.js"></script>
+</body>

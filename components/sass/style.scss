@@ -1,0 +1,97 @@
+@import 'compass';
+@import 'normalize';
+@import 'susy';
+
+$color-primary: steelblue;
+$color-secondary: aliceblue;
+$color-accent: orange;
+
+$dark: #999;
+
+$susy: (
+  global-box-sizing: border-box,
+  container: 48em
+);
+
+* {
+  @include box-sizing(border-box);
+}
+
+html {
+  height: 100%;
+  width: 100%;
+
+  font-style: 100%; 
+  line-height: 1;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  color: $dark;
+
+}
+
+.wrapper {
+  @include clearfix;
+  @include container;
+  margin-top: 1em;
+}
+
+fieldset {
+  border: 0; 
+}
+
+legend {
+   font-size: 2em;
+   margin-bottom: .5em;
+   color: darken($color-primary,25%);
+}
+
+label {
+  float: left;
+  text-align: right;
+  margin-right: 1em;
+  width: 33%;
+  color: steelblue;
+}
+
+input {
+
+  padding: .5em;
+  margin-bottom: .5em;
+  width: 55%;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0,0,0,.3);
+  border-color: #fff;
+
+  &[type='submit'] {
+    float: right;
+    left: -2.1em;
+    position: relative;
+    width: 25%;
+    border: 0;
+    color: #fff;
+    background: $color-accent;
+  }
+
+  &[type='text']:focus {
+    border: 2px solid darken($color-primary, 10%);
+    outline: 0;
+    @include transition-property(border);
+    @include transition-duration(.3s);
+  }
+} // input
+
+form {
+  background-color: $color-secondary;  
+  @include border-radius(4px);
+  box-shadow: 2px 2px 2px $dark;
+  padding: 1em;
+}
+
+
+
