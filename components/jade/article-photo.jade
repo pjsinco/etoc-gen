@@ -24,10 +24,8 @@ body
         br
         label(for='blurb').v-align-top Blurb
         textarea(rows='8' cols='80' wrap='virtual' name='blurb')#blurb
-        br
         label(class='char_count') Character count
-        input(type='button' value='Count characters' onClick="var f = document.form_count; document.querySelector('.char_count').innerHTML =f.blurb.value.length + \" characters\";").btn.btn-count
-        br(style='clear: both')
+        br
         label(for='section') Section
         input(type='text' name='section')#section
         br
@@ -37,4 +35,4 @@ body
         input(type='submit' value='Go').btn
         
   script(src='http://localhost:35729/livereload.js')
-
+  script(src='js/script.js')

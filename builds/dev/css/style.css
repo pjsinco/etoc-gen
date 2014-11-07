@@ -237,7 +237,7 @@ th {
 html {
   height: 100%;
   width: 100%;
-  font-style: 100%;
+  font-size: 100%;
   line-height: 1;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -406,4 +406,11 @@ a {
 
 /* line 200, ../../../components/sass/style.scss */
 .char_count {
-  color: #8db3d3; }
+  color: #8db3d3;
+  font-size: .8em;
+  position: relative;
+  top: -18em; }
+
+/* line 207, ../../../components/sass/style.scss */
+.clear-both {
+  clear: both; }

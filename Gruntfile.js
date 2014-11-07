@@ -3,9 +3,18 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-compass");
   grunt.loadNpmTasks("grunt-contrib-jade");
+  grunt.loadNpmTasks("grunt-contrib-uglify");
 
 
   grunt.initConfig({
+
+    uglify: {
+      dev: {
+        files: {
+          'builds/dev/js/script.js': ['components/js/**/*.js']
+        }
+      }
+    },
 
     compass: {
       dev: {
@@ -43,6 +52,11 @@ module.exports = function(grunt) {
       compileHtml: {
         files: ['components/jade/*.jade'],
         tasks: ['jade']
+      },
+
+      scripts: {
+        files: ['components/js/**/*.js'],
+        tasks: ['uglify']
       }
     
     } // watch

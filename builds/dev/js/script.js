@@ -1,0 +1,1 @@
+!function(){var a=document.querySelector("#blurb");a.addEventListener("keyup",function(){document.querySelector("label.char_count").innerHTML=a.value.length+" characters"},!0)}();
