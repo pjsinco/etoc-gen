@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>eTOC Generator: Article With Photo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <form action="article-photo-process.php" method="post" name="form_count">
+      <fieldset>
+        <legend>Article Without Photo</legend>
+        <label for="story_head">Story headline</label>
+        <input type="text" name="story_head" id="story_head"><br>
+        <label for="story_link">Story link</label>
+        <input type="text" name="story_link" id="story_link"><br>
+        <label for="blurb">Blurb</label>
+        <textarea rows="8" cols="80" wrap="virtual" name="blurb" id="blurb"></textarea><br>
+        <label class="char_count">Character count</label>
+        <input type="button" value="Count characters" onClick="var f = document.form_count; document.querySelector('.char_count').innerHTML =f.blurb.value.length + &quot; characters&quot;;" class="btn btn-count"><br style="clear: both">
+        <label for="section">Section</label>
+        <input type="text" name="section" id="section"><br>
+        <label for="date">Date</label>
+        <input type="text" name="date" id="date"><br>
+        <input type="submit" value="Go" class="btn">
+      </fieldset>
+    </form>
+  </div>
+  <script src="http://localhost:35729/livereload.js"></script>
+</body>

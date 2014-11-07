@@ -1,0 +1,34 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title eTOC Generator: Article With Photo
+  meta(name="viewport" content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='css/style.css')
+body
+
+  div.wrapper
+    form(action='article-photo-process.php' method='post' name='form_count')
+      fieldset
+        legend Article Without Photo
+        label(for='story_head') Story headline
+        input(type='text' name='story_head')#story_head
+        br
+        label(for='story_link') Story link
+        input(type='text' name='story_link')#story_link
+        br
+        label(for='blurb') Blurb
+        textarea(rows='8' cols='80' wrap='virtual' name='blurb')#blurb
+        br
+        label(class='char_count') Character count
+        input(type='button' value='Count characters' onClick="var f = document.form_count; document.querySelector('.char_count').innerHTML =f.blurb.value.length + \" characters\";").btn.btn-count
+        br(style='clear: both')
+        label(for='section') Section
+        input(type='text' name='section')#section
+        br
+        label(for='date') Date
+        input(type='text' name='date')#date
+        br
+        input(type='submit' value='Go').btn
+        
+  script(src='http://localhost:35729/livereload.js')
+

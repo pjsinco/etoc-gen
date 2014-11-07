@@ -6,12 +6,14 @@ head
   link(rel='stylesheet' href='css/style.css')
 
 body
-  p Pick an eTOC element to generate
-  ul
-    li: a(href='builds/dev/matter.html') Top and bottom matter
-    li: a(href="section-head.html") Section heading (e.g., "News", "Features")
-    li: a(href="article-photo.html") Article with photo
-    li: a(href="article-no-photo.html") Article without photo
+  div.wrapper
+    div.template-pick-container
+      h1 Pick an eTOC element to generate
+      ul
+        li: a(href='matter.html') Top and bottom matter
+        //-li: a(href="section-head.html") Section heading (e.g., "News", "Features")
+        li: a(href="article-photo.html") Article with photo
+        li: a(href="article-no-photo.html") Article without photo
 
   script(src='http://localhost:35729/livereload.js')
 
